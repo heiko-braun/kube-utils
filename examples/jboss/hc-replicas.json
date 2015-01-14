@@ -1,0 +1,9 @@
+{
+  "id": "hcReplicaController",
+  "kind": "ReplicationController",
+  "apiVersion": "v1beta1",
+  "desiredState": {
+    "replicas": 2,
+    "replicaSelector": {"controller-type": "host"}
+  }
+}
