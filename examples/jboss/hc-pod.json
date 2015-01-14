@@ -28,10 +28,6 @@
             {
               "name" : "SERVER_GROUP",
               "value": "main-server-group"
-            },
-            {
-              "name" : "DOMAIN_CONTROLLER_PORT_9990_TCP_ADDR",
-              "value": "localhost"
             }
           ],
           "command": [
