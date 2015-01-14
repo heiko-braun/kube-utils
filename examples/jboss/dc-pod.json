@@ -6,32 +6,34 @@
     "manifest": {
       "version": "v1beta1",
       "id": "domain-controller",
-      "containers": [{
-        "name": "domain-controller",
-        "image": "hpehl/wildfly-kubernetes",
-        "ports": [
-          {
-            "containerPort": 9990,
-            "hostPort": 9990
-          }
-        ],
-        "env": [
-          {
-            "name": "WILDFLY_MANAGEMENT_USER",
-            "value": "admin"
-          },
-          {
-            "name": "WILDFLY_MANAGEMENT_PASSWORD",
-            "value": "password123"
-          }
-        ],
-        "command": [
-          "--domain-config", "domain.xml",
-          "--host-config", "host-master.xml",
-          "-b", "0.0.0.0",
-          "-bmanagement", "0.0.0.0"
-        ]
-      }]
+      "containers": [
+        {
+          "name": "domain-controller",
+          "image": "hpehl/wildfly-kubernetes",
+          "ports": [
+            {
+              "containerPort": 9990,
+              "hostPort": 9990
+            }
+          ],
+          "env": [
+            {
+              "name": "WILDFLY_MANAGEMENT_USER",
+              "value": "admin"
+            },
+            {
+              "name": "WILDFLY_MANAGEMENT_PASSWORD",
+              "value": "password123"
+            }
+          ],
+          "command": [
+            "--domain-config", "domain.xml",
+            "--host-config", "host-master.xml",
+            "-b", "0.0.0.0",
+            "-bmanagement", "0.0.0.0"
+          ]
+        }
+      ]
     }
   },
   "labels": {
