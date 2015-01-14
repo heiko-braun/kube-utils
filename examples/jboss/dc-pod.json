@@ -24,6 +24,12 @@
             "name": "WILDFLY_MANAGEMENT_PASSWORD",
             "value": "password123"
           }
+        ],
+        "command": [
+          "--domain-config", "domain.xml",
+          "--host-config", "host-master.xml",
+          "-b", "0.0.0.0",
+          "-bmanagement", "0.0.0.0"
         ]
       }]
     }
