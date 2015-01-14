@@ -1,9 +1,13 @@
 {
-  "id": "domain-controller-service",
+  "id": "dc",
+  "kind": "Service",
   "apiVersion": "v1beta1",
   "selector": {
     "controller-type": "domain"
   },
+  "publicIPs" : [
+   "172.31.13.172"		
+  ],	
   "containerPort": 9990,
   "protocol": "TCP",
   "port": 9990
