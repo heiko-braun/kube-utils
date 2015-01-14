@@ -5,6 +5,7 @@
   "selector": {
     "controller-type": "host"
   },
+  "publicIPs": ["172.31.13.172"], 	
   "containerPort": 8080,
   "protocol": "TCP",
   "port": 8081
