@@ -15,12 +15,6 @@
             {
               "name": "host-controller",
               "image": "hpehl/wildfly-kubernetes",
-              "ports": [
-                {
-                  "containerPort": 8080,
-                  "hostPort": 8081
-                }
-              ],
               "env": [
                 {
                   "name": "WILDFLY_MANAGEMENT_USER",
