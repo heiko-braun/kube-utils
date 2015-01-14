@@ -13,7 +13,18 @@
           {
             "containerPort": 9990,
             "hostPort": 9990
-          }]
+          }
+        ],
+        "env": [
+          {
+            "name": "WILDFLY_MANAGEMENT_USER",
+            "value": "admin"
+          },
+          {
+            "name": "WILDFLY_MANAGEMENT_PASSWORD",
+            "value": "password123"
+          }
+        ]
       }]
     }
   },
