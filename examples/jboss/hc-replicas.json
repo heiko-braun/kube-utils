@@ -4,6 +4,48 @@
   "apiVersion": "v1beta1",
   "desiredState": {
     "replicas": 2,
-    "replicaSelector": {"controller-type": "host"}
+    "replicaSelector": {"controller-type": "host"},
+    "podTemplate": {
+      "desiredState": {
+        "manifest": {
+          "version": "v1beta1",
+          "id": "host-controller",
+          "restartPolicy": "always",
+          "containers": [
+            {
+              "name": "host-controller",
+              "image": "hpehl/wildfly-kubernetes",
+              "ports": [
+                {
+                  "containerPort": 8080,
+                  "hostPort": 8081
+                }
+              ],
+              "env": [
+                {
+                  "name": "WILDFLY_MANAGEMENT_USER",
+                  "value": "admin"
+                },
+                {
+                  "name": "WILDFLY_MANAGEMENT_PASSWORD",
+                  "value": "password123"
+                },
+                {
+                  "name" : "SERVER_GROUP",
+                  "value": "main-server-group"
+                }
+              ],
+              "command": [
+                "--domain-config", "domain.xml",
+                "--host-config", "host-slave.xml",
+                "-b", "0.0.0.0",
+                "-bmanagement", "0.0.0.0"
+              ]
+            }
+          ]
+        }
+      },
+      "labels": {"controller-type": "host"}
+    }
   }
 }
