@@ -1,6 +1,6 @@
 {
   "id": "domain-controller-service",
-  "version":"v1beta1",
+  "apiVersion": "v1beta1",
   "selector": {
     "controller-type": "domain"
   },
