@@ -12,8 +12,8 @@
           "image": "hpehl/wildfly-kubernetes",
           "ports": [
             {
-              "containerPort": 9990,
-              "hostPort": 9990
+              "containerPort": 8080,
+              "hostPort": 8081
             }
           ],
           "env": [
@@ -28,6 +28,10 @@
             {
               "name" : "SERVER_GROUP",
               "value": "main-server-group"
+            },
+            {
+              "name" : "DOMAIN_CONTROLLER_PORT_9990_TCP_ADDR",
+              "value": "localhost"
             }
           ],
           "command": [
