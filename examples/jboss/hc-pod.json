@@ -6,6 +6,7 @@
     "manifest": {
       "version": "v1beta1",
       "id": "host-controller",
+      "restartPolicy": "always",
       "containers": [
         {
           "name": "host-controller",
