@@ -13,16 +13,16 @@
           "containerPort": 8080,
           "hostPort": 8081
         },
-	{
-	"containerPort": 9990,
-	"hostPort": 9990
-	}],
-	"env": [
-        {
-          "name": "MY_VAR",
-          "value": "Hello World"
-        }
-        ],
+          {
+            "containerPort": 9990,
+            "hostPort": 9990
+          }],
+        "env": [
+          {
+            "name": "MY_VAR",
+            "value": "Hello World"
+          }
+        ]
       }]
     }
   },
