@@ -1,0 +1,9 @@
+{
+  "id": "domain-controller-service",
+  "selector": {
+    "controller-type": "domain"
+  },
+  "containerPort": 9990,
+  "protocol": "TCP",
+  "port": 9990
+}
