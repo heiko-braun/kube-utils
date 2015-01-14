@@ -1,0 +1,12 @@
+{
+  "id": "web-ports",
+  "kind": "Service",
+  "apiVersion": "v1beta1",
+  "selector": {
+    "controller-type": "host"
+  },
+  "containerPort": 8080,
+  "protocol": "TCP",
+  "port": 8081
+}
+
